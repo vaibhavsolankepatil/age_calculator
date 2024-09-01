@@ -10,22 +10,22 @@ const sideNavigation = document.querySelector(".sideNavigation"),
   locationdiv = document.querySelector(".location");
 
 promptQuestions = [
-  {
-    question: "Write a thank you note to my subscribers",
-    icon: "fa-solid fa-wand-magic-sparkles",
-  },
-  {
-    question: "Write a sample code to learn Javascript",
-    icon: "fa-solid fa-code",
-  },
-  {
-    question: "How to become a Full Stack Developer?",
-    icon: "fa-solid fa-laptop-code",
-  },
-  {
-    question: "How to become a Front-end Developer?",
-    icon: "fa-solid fa-database",
-  },
+  // {
+  //   question: "Write a thank you note to my subscribers",
+  //   icon: "fa-solid fa-wand-magic-sparkles",
+  // },
+  // {
+  //   question: "Write a sample code to learn Javascript",
+  //   icon: "fa-solid fa-code",
+  // },
+  // {
+  //   question: "How to become a Full Stack Developer?",
+  //   icon: "fa-solid fa-laptop-code",
+  // },
+  // {
+  //   question: "How to become a Front-end Developer?",
+  //   icon: "fa-solid fa-database",
+  // },
 ];
 
 window.addEventListener("load", () => {
