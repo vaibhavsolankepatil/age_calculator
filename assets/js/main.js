@@ -1,117 +1,48 @@
-(function($) {
-  
-  "use strict";  
+let userInput = document.getElementById("date");
 
-  $(window).on('load', function() {
-
-    /* 
-   MixitUp
-   ========================================================================== */
-  $('#portfolio').mixItUp();
-
-  /* 
-   One Page Navigation & wow js
-   ========================================================================== */
-    var OnePNav = $('.onepage-nev');
-    var top_offset = OnePNav.height() - -0;
-    OnePNav.onePageNav({
-      currentClass: 'active',
-      scrollOffset: top_offset,
-    });
-  
-  /*Page Loader active
-    ========================================================*/
-	
-		/*PRELOADER JS*/ 
-			$('.spinner').fadeOut();
-			$('.preloader').delay(350).fadeOut('slow'); 
-		/*END PRELOADER JS*/
-
-		/*START MENU JS*/		
-			 if ($(window).scrollTop() > 200) {
-              $('.fixed-top').addClass('menu-bg');
-          } else {
-              $('.fixed-top').removeClass('menu-bg');
-          }
-			$(window).on('scroll', function(){
-				if ( $(window).scrollTop() > 100 ) {
-					$('.site-navigation, .header-white, .header').addClass('navbar-fixed');
-				} else {
-					$('.site-navigation, .header-white, .header').removeClass('navbar-fixed');
-				}
-			});				
-		/*END MENU JS*/	
-
-      /* WOW Scroll Spy
-    ========================================================*/
-     var wow = new WOW({
-      //disabled for mobile
-        mobile: false
-    });
-
-    wow.init();
-
-    /* Nivo Lightbox 
-    ========================================================*/
-    $('.lightbox').nivoLightbox({
-        effect: 'fadeScale',
-        keyboardNav: true,
-      });
-
-    /* Counter
-    ========================================================*/
-    $('.counterUp').counterUp({
-     delay: 20,
-     time: 3000
-    });
-	
-	 /* Tesimonial
-    ========================================================*/
-	$(".carousel-testimony").owlCarousel({
-		loop:true,
-		navText:false,
-		autoplay: true,
-		items:1,
-		slideSpeed: 5000,
-		responsive:{
-			0:{
-				items:1
-			},
-			768:{
-				items:1
-			},
-			979:{
-				items:1
-			},
-			1000:{
-				items:1
-			}
-		}
-	});
+let result = document.getElementById("result");
 
 
-    /* Back Top Link active
-    ========================================================*/
-      var offset = 200;
-      var duration = 500;
-      $(window).scroll(function() {
-        if ($(this).scrollTop() > offset) {
-          $('.back-to-top').fadeIn(400);
-        } else {
-          $('.back-to-top').fadeOut(400);
-        }
-      });
+function calculateAge(){
+    let birthDate = new Date(userInput.value);
 
-      $('.back-to-top').on('click',function(event) {
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: 0
-        }, 600);
-        return false;
-      });
+    let d1 = birthDate.getDate();
+    let m1 = birthDate.getMonth() + 1;
+    let y1 = birthDate.getFullYear();
 
 
+    let today = new Date();
 
-  });      
+    let d2 = today.getDate();
+    let m2 = today.getMonth() + 1;
+    let y2 = today.getFullYear();
 
-}(jQuery));
+
+   let d3,m3,y3;
+
+   y3 = y2-y1;
+
+   if (m2>=m1){
+    m3 = m2 - m1;
+   }else {
+    y3--;
+    m3 = 12 + m2 - m1;
+   }
+
+   if(d2 >= d1){
+    d3 = d2 - d1;
+   }else {
+     m3--;
+     d3 = getDaysInMonth(y1, m1) + d2 - d1;
+   }
+    if(m3<0){
+        m3 = 11;
+        y3--;
+    }
+    result.innerHTML = `You are ${y3} years, ${m3} months and ${d3} days`;
+   
+}
+
+function getDaysInMonth(year, month) {
+    return new Date(year, month,0).getDate();
+}
