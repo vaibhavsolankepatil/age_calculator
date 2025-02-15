@@ -28,9 +28,9 @@ Here are some ideas to get you started:
 
 ☆⁣ 🧑‍💻 I’m currently learning **𝐃𝐢𝐩𝐥𝐨𝐦𝐚 𝐢𝐧 𝐂𝐨𝐦𝐩𝐮𝐭𝐞𝐫 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠 𝐨𝐟 𝐓𝐡𝐢𝐫𝐝 𝐘𝐞𝐚𝐫**
 
-☆⁣ 🧑‍💻 My Forth Website "Gemini AI..." Developed by mi...
+☆⁣ 🧑‍💻 My Forth Website "Age Calculator..." Developed by mi...
 
-☆⁣ 🧑‍💻 https://vaibhavsolankepatil.github.io/gemini_ai/
+☆⁣ 🧑‍💻 https://vaibhavsolankepatil.github.io/age_calculator/
 
 <h3 align="left">Connect with me :</h3>
 
